@@ -7,7 +7,7 @@ class SalesOrderLine(models.Model):
 
     _inherit = 'sale.order.line'
 
-    last_sales_price = fields.Float(string='Last Price', compute='_compute_last_sales_price')
+    last_sales_price = fields.Float(string='Ultimo Precio Venta', compute='_compute_last_sales_price')
 
     def _compute_last_sales_price(self):
         move_line_obj = self.env['account.move.line'].sudo()
